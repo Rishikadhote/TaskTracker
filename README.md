@@ -1,29 +1,29 @@
-# 🕒 **Task Timer Tracker – Productivity Monitor**
+#  **Task Timer Tracker – Productivity Monitor**
 
 A full-stack productivity app to track time spent on various tasks. Includes features like task categorization, real-time timer logging, daily summaries, and charts.
 
 ---
 
-## 📸 **Live Demo**
+##  **Live Demo**
 
 🔗 **Frontend:** [https://rishikadhote.github.io/TaskTracker](https://rishikadhote.github.io/TaskTracker)  
 🔗 **Backend API:** _Coming Soon (Render/Railway link)_
 
 ---
 
-## 📌 **Features**
+##  **Features**
 
-- ✅ Add, Edit, Delete tasks
-- ✅ Start/Stop task timer with automatic time log creation
-- ✅ View total time spent per task
-- ✅ Categorize tasks (Work, Study, Break)
-- ✅ Pie/Bar chart for category-wise time spent
-- ✅ Calendar view and summary table (optional)
-- ✅ Fully responsive and clean UI
+-  Add, Edit, Delete tasks
+-  Start/Stop task timer with automatic time log creation
+-  View total time spent per task
+-  Categorize tasks (Work, Study, Break)
+-  Pie/Bar chart for category-wise time spent
+-  Calendar view and summary table (optional)
+-  Fully responsive and clean UI
 
 ---
 
-## 🔧 **Tech Stack**
+##  **Tech Stack**
 
 | Layer     | Technology                        |
 |-----------|-----------------------------------|
@@ -34,7 +34,7 @@ A full-stack productivity app to track time spent on various tasks. Includes fea
 
 ---
 
-## 🏗️ **Folder Structure**
+##  **Folder Structure**
 ```
 TaskTracker/
 ├── backend/
@@ -54,7 +54,7 @@ TaskTracker/
 ```
 ---
 
-## 🗃️ **Database Schema**
+##  **Database Schema**
 
 ```sql
 CREATE DATABASE task_tracker;
@@ -79,9 +79,9 @@ CREATE TABLE time_logs (
 );
 ```
 
-## 📦 Setup Instructions
+##  Setup Instructions
 
-### 🖥️ Frontend
+###  Frontend
 
 ```bash
 cd frontend
