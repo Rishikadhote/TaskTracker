@@ -77,7 +77,7 @@ CREATE TABLE time_logs (
   end_time DATETIME,
   FOREIGN KEY (task_id) REFERENCES tasks(id) ON DELETE CASCADE
 );
----
+```
 
 ## 📦 Setup Instructions
 
@@ -88,6 +88,7 @@ cd frontend
 npm install
 npm start
 
+```
 ---
 
 ###  **Author Section (Code Version)**
@@ -98,3 +99,4 @@ npm start
 **Rishika Dhote**  
 📧 rishikadhote@example.com  
 🔗 [GitHub](https://github.com/Rishikadhote)
+```
