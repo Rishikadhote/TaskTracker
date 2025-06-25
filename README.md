@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# 🕒 **Task Timer Tracker – Productivity Monitor**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack productivity app to track time spent on various tasks. Includes features like task categorization, real-time timer logging, daily summaries, and charts.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📸 **Live Demo**
 
-### `npm start`
+🔗 **Frontend:** [https://rishikadhote.github.io/TaskTracker](https://rishikadhote.github.io/TaskTracker)  
+🔗 **Backend API:** _Coming Soon (Render/Railway link)_
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📌 **Features**
 
-### `npm test`
+- ✅ Add, Edit, Delete tasks
+- ✅ Start/Stop task timer with automatic time log creation
+- ✅ View total time spent per task
+- ✅ Categorize tasks (Work, Study, Break)
+- ✅ Pie/Bar chart for category-wise time spent
+- ✅ Calendar view and summary table (optional)
+- ✅ Fully responsive and clean UI
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🔧 **Tech Stack**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Layer     | Technology                        |
+|-----------|-----------------------------------|
+| Frontend  | React, Axios, Chart.js, React Router |
+| Backend   | Node.js, Express.js               |
+| Database  | MySQL (via MySQL Workbench)       |
+| Hosting   | GitHub Pages (Frontend), Render/Railway (Backend) |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🏗️ **Folder Structure**
 
-### `npm run eject`
+TaskTracker/
+├── backend/
+│ ├── db/
+│ ├── routes/
+│ ├── controllers/
+│ ├── index.js
+│ └── .env
+├── frontend/
+│ ├── components/
+│ ├── pages/
+│ ├── services/
+│ ├── App.js
+│ ├── index.js
+│ └── index.css
+└── README.md
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🗃️ **Database Schema**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```sql
+CREATE DATABASE task_tracker;
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+USE task_tracker;
 
-## Learn More
+CREATE TABLE tasks (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  description TEXT,
+  category VARCHAR(50),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+CREATE TABLE time_logs (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  task_id INT NOT NULL,
+  task_name VARCHAR(255),
+  start_time DATETIME,
+  end_time DATETIME,
+  FOREIGN KEY (task_id) REFERENCES tasks(id) ON DELETE CASCADE
+);
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📦 Setup Instructions
 
-### Code Splitting
+### 🖥️ Frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+cd frontend
+npm install
+npm start
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+###  **Author Section (Code Version)**
 
-### Making a Progressive Web App
+```markdown
+##  Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Rishika Dhote**  
+📧 rishikadhote@example.com  
+🔗 [GitHub](https://github.com/Rishikadhote)
