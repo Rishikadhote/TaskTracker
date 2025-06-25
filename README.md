@@ -91,12 +91,9 @@ npm start
 ```
 ---
 
-###  **Author Section (Code Version)**
+###  **Author**
 
 ```markdown
-##  Author
 
-**Rishika Dhote**  
-📧 rishikadhote@example.com  
-🔗 [GitHub](https://github.com/Rishikadhote)
+Rishika Dhote
 ```
