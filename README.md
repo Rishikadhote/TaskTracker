@@ -77,6 +77,7 @@ CREATE TABLE time_logs (
   end_time DATETIME,
   FOREIGN KEY (task_id) REFERENCES tasks(id) ON DELETE CASCADE
 );
+---
 
 ## 📦 Setup Instructions
 
