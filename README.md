@@ -35,7 +35,7 @@ A full-stack productivity app to track time spent on various tasks. Includes fea
 ---
 
 ## 🏗️ **Folder Structure**
-
+```
 TaskTracker/
 ├── backend/
 │ ├── db/
@@ -51,7 +51,7 @@ TaskTracker/
 │ ├── index.js
 │ └── index.css
 └── README.md
-
+```
 ---
 
 ## 🗃️ **Database Schema**
